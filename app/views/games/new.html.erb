@@ -1,0 +1,15 @@
+<h1 style="text-align: center">Longest Word Game</h1>
+<br>
+
+<h2 style="text-align: center; font-weight: normal"><%= p @letters %></h2>
+<br>
+
+<form action="/score" method="post" style="text-align: center">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <%= hidden_field_tag :letters, @letters %>
+  <label for="word_try">What is the longest word you can find?</label>
+  <br>
+  <br>
+  <input type="text" name="word" placeholder="Type a word" id="word_try">
+  <input type="submit" value="Play!">
+</form>
